@@ -13,7 +13,7 @@
             <a href="#cars">Автомобили</a>
           </li>
           <li class="menu__item">
-            <a href="#prise">Бронирование авто</a>
+            <a href="#price">Бронирование авто</a>
           </li>
         </ul>
       </nav>
@@ -32,13 +32,13 @@
         </div>
       </div>
       <div class="main-action">
-        <button class="button" id="main-action" (click)="goScroll(cars)">
+        <button class="button" id="main-action" (click)="goScroll(price, car)">
           Посмотреть автомобили
         </button>
       </div>
     </div>
   </section>
-  <section class="cars" id="cars" #cars>
+  <section class="cars" id="cars" #car>
     <div class="container">
       <h2 class="sub-title">Наш автопарк</h2>
       <div class="cars-items">
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="car-item-action">
-            <button class="button car-button" (click)="goScroll(prise, cars)">
+            <button class="button car-button" (click)="goScroll(price, car)">
               Забронировать
             </button>
           </div>
@@ -73,31 +73,31 @@
       </div>
     </div>
   </section>
-  <section class="prise" id="prise" #prise>
+  <section class="price" id="price" #price>
     <div class="container">
       <h2 class="sub-title">Узнать цену и забронировать</h2>
-      <div class="prise-text">
+      <div class="price-text">
         Заполните данные, и мы перезвонима для уточнения всех деталей
         Бронирование
       </div>
-      <form action="" class="prise-form" [formGroup]="priseForm">
+      <form action="" class="price-form" [formGroup]="priceForm">
         <input
           type="text"
-          class="prise-input"
+          class="price-input"
           id="name"
           placeholder="Ваше имя"
           formControlName="name"
         />
         <input
           type="text"
-          class="prise-input"
+          class="price-input"
           id="phone"
           placeholder="Ваш телефон"
           formControlName="phone"
         />
         <input
           type="text"
-          class="prise-input"
+          class="price-input"
           id="car"
           placeholder="Автомобиль который вас интересует"
           formControlName="car"
@@ -105,9 +105,9 @@
         <button
           class="button"
           type="button"
-          id="prise-action"
+          id="price-action"
           (click)="oneSubmit()"
-          [disabled]="!priseForm.valid"
+          [disabled]="!priceForm.valid"
         >
           Узнать цену
         </button>

@@ -7,7 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  priseForm = this.fb.group({
+  priceForm = this.fb.group({
     name: ['', Validators.required],
     phone: ['', Validators.required],
     car: ['', Validators.required],
@@ -83,7 +83,7 @@ export class AppComponent {
   goScroll(target: HTMLElement, car?: any) {
     target.scrollIntoView({ behavior: 'smooth' });
     if (car) {
-      this.priseForm.patchValue({ car: car.name });
+      this.priceForm.patchValue({ car: car.name });
     }
   }
   trans: any;
@@ -105,9 +105,9 @@ export class AppComponent {
     this.bgPos = { backgroundPositionX: '0' + 0.3 * window.scrollY + 'px' };
   }
   oneSubmit() {
-    if (this.priseForm.valid) {
+    if (this.priceForm.valid) {
       alert('Спасибо за заявку, мы свяжемся с вами в ближайшее время');
-      this.priseForm.reset();
+      this.priceForm.reset();
     }
   }
 }

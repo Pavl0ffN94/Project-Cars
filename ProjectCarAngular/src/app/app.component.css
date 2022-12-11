@@ -164,26 +164,26 @@
 .car-item-point > .div:nth-child(2) {
   font-weight: bold;
 }
-.prise {
+.price {
   overflow: hidden;
 }
-.prise .container {
+.price .container {
   position: relative;
   padding-bottom: 121px;
 }
-.prise .sub-title {
+.price .sub-title {
   margin-bottom: 20px;
 }
-.prise-text {
+.price-text {
   margin-bottom: 60px;
   font-size: 16px;
   line-height: 130%;
   color: #5d5d5f;
 }
-.prise-form {
+.price-form {
   max-width: 343px;
 }
-.prise-input {
+.price-input {
   padding: 22px 18px;
   width: 344px;
   height: 65px;
@@ -194,13 +194,13 @@
   outline: none;
   margin-bottom: 15px;
 }
-.prise-input::placeholder {
+.price-input::placeholder {
   color: #5d5d5f;
 }
-.prise .button {
+.price .button {
   width: 100%;
 }
-.prise-image {
+.price-image {
   position: absolute;
   bottom: 0;
   left: 401px;
@@ -220,10 +220,10 @@
   color: #030305;
 }
 
-.prise-input.ng-touched.ng-valid {
+.price-input.ng-touched.ng-valid {
   border: 1px solid #5d5d5f;
 }
 
-.prise-input.ng-touched.ng-invalid {
+.price-input.ng-touched.ng-invalid {
   border: 1px solid red;
 }
